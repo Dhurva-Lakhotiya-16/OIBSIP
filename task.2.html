@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhurva_lakhotiya</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1e23;
+            color: #e0e6ed;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #111418;
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #00c896;
+        }
+
+        header h1 {
+            color: #00c896;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero / Intro Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background-color: #222831;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .avatar-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #00c896;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: #111418;
+            flex-shrink: 0;
+        }
+
+        .hero-text h2 {
+            color: #ffbe3b;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Portfolio Details Sections */
+        .section {
+            background-color: #222831;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .section h3 {
+            color: #00c896;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #393e46;
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .skills-list li {
+            background-color: #393e46;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border-left: 3px solid #ffbe3b;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            background: #2d343f;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #ffbe3b;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item a {
+            color: #e0e6ed;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #00c896;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> hello, i am Dhurva Lakhotiya</h1>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="avatar-placeholder">👤</div>
+            <div class="hero-text">
+                <h2>Hello, I'm a Web Developer</h2>
+                <p>Welcome to my portfolio! I specialize in building responsive, modern, and user-friendly web interfaces using foundational web technologies.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>About & Background</h3>
+            <p>I am passionate about turning complex ideas into clean, functional code. Currently exploring front-end engineering, UI alignments, padding strategies, and aesthetic color palettes.</p>
+            
+            <h4 style="margin-top: 1.5rem; color: #ffbe3b;">Core Skills</h4>
+            <ul class="skills-list">
+             <li>HTML5 & Semantic Layouts</li>
+            <li>CSS3 & Flexbox/Grid layouts</li>
+            <li>Responsive Web Design</li>
+            <li>JavaScript Fundamentals</li>
+            <li>Python Programming language </li>
+            <li>C Programming language  </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>Get In Touch</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:dhurvalakhotiya@gmail.com">dhurvalakhotiya@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub</strong>
+                    <a href="https://github.com" target="_blank">github.com/username</a>
+                </div>
+                 <div class="contact-item">
+                    <strong>LinkedIn</strong>
+                    <a href="https://linkedin.com" target="_blank">dhurva-lakhotiya</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
+
+task2

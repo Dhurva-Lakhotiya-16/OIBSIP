@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temperature Converter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.container{
+    width:420px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    animation:fade 1s;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+color:#FFD54F;
+}
+
+.subtitle{
+margin-bottom:25px;
+color:#ddd;
+font-size:15px;
+}
+
+input,select{
+width:100%;
+padding:15px;
+margin:12px 0;
+border:none;
+outline:none;
+border-radius:12px;
+font-size:17px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:linear-gradient(45deg,#00C9FF,#92FE9D);
+color:#222;
+transition:.4s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+#result{
+margin-top:25px;
+padding:18px;
+font-size:20px;
+font-weight:bold;
+border-radius:15px;
+background:rgba(255,255,255,.15);
+min-height:120px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:#FFD54F;
+line-height:1.8;
+}
+
+.footer{
+margin-top:20px;
+font-size:13px;
+color:#ccc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌡 Temperature Converter</h1>
+
+<p class="subtitle">
+Convert Celsius, Fahrenheit & Kelvin Instantly
+</p>
+
+<input
+type="number"
+id="temperature"
+placeholder="Enter Temperature">
+
+<select id="unit">
+<option value="C">Celsius (°C)</option>
+<option value="F">Fahrenheit (°F)</option>
+<option value="K">Kelvin (K)</option>
+</select>
+
+<button onclick="convertTemperature()">
+🔄 Convert Temperature
+</button>
+
+<div id="result">
+Result will appear here...
+</div>
+
+<div class="footer">
+Made with ❤️ using HTML, CSS & JavaScript
+</div>
+
+</div>
+
+<script>
+
+function convertTemperature(){
+
+let temp=document.getElementById("temperature").value;
+
+let unit=document.getElementById("unit").value;
+
+let result=document.getElementById("result");
+
+if(temp===""){
+
+result.innerHTML="⚠ Please enter a temperature.";
+
+return;
+
+}
+
+temp=Number(temp);
+
+let c,f,k;
+
+if(unit==="C"){
+
+c=temp;
+f=(temp*9/5)+32;
+k=temp+273.15;
+
+}
+
+else if(unit==="F"){
+
+c=(temp-32)*5/9;
+f=temp;
+k=c+273.15;
+
+}
+
+else{
+
+k=temp;
+c=temp-273.15;
+f=(c*9/5)+32;
+
+}
+
+result.innerHTML=`
+
+<h3>✅ Converted Temperature</h3>
+
+<p>🌡 Celsius : <b>${c.toFixed(2)} °C</b></p>
+
+<p>🔥 Fahrenheit : <b>${f.toFixed(2)} °F</b></p>
+
+<p>❄ Kelvin : <b>${k.toFixed(2)} K</b></p>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
